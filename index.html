@@ -20,8 +20,11 @@
         <div class="col-lg-5 col-md-5 col-12 left-panel">
             <div class="profile-img-wrapper">
                 <img src="sshree.jpg" 
-                     alt="Shrijan Shrestha" 
-                     class="profile-img">
+                    alt="Shrijan Shrestha" 
+                    class="profile-img"
+                    data-bs-toggle="modal" 
+                    data-bs-target="#profileImageModal"
+                    style="cursor: pointer;">
             </div>
             <div class="name-title">
                 <h1>SHRIJAN<br>SHRESTHA</h1>
@@ -54,7 +57,9 @@
                     <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
                     <div class="contact-info">
                         <h6>Location</h6>
-                        <p>Bungamati 22, Lalitpur</p>
+                        <a href="https://www.google.com/maps/place/Rato+Machindranath+Temple,Bungamati,Lalitpur/@27.629995,85.3013237,17z/data=!4m6!3m5!1s0x39eb17bcbc676e6d:0x71bb4b30e0c5c558!8m2!3d27.6296562!4d85.3021253!16s%2Fg%2F1hd_xw3xt?entry=ttu&g_ep=EgoyMDI2MDMyMi4wIKXMDSoASAFQAw%3D%3D" target="_blank" style="text-decoration: none;">
+                            Bungamati, Lalitpur, 22
+                        </a>
                     </div>
                 </div>
                 <div class="contact-item">
@@ -178,6 +183,17 @@
             <hr class="mt-4">
             <div class="text-center small text-secondary mt-2">
                 <i class="fa-regular fa-clock"></i> Open for internships & fullstack developer opportunities
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="profileImageModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content bg-transparent border-0">
+            <div class="modal-body text-center p-0">
+                <img src="sshree.jpg" alt="Shrijan Shrestha" class="img-fluid rounded">
             </div>
         </div>
     </div>
