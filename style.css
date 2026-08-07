@@ -1,255 +1,341 @@
- * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(145deg, #e9eef3 0%, #dce3ec 100%);
+    font-family: 'Inter', sans-serif;
+    padding: 2.5rem 1rem;
+    min-height: 100vh;
+}
+
+/* Main card container */
+.cv-card {
+    max-width: 920px;                 /* reduced so it doesn’t look too wide */
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 1.5rem;
+    box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.18);
+    overflow: hidden;
+}
+
+/* Top panel (previously left) */
+.top-container {
+    background: #0a2b3e;
+    color: #f0f6fa;
+    padding: 2.5rem 2.2rem 2rem;
+    text-align: center;
+}
+
+.name-title {
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.name-title h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    color: white;
+    margin-bottom: 0.4rem;
+    line-height: 1.15;
+}
+
+.name-title .badge-role {
+    background: #ffc107;
+    color: #0a2b3e;
+    font-weight: 600;
+    padding: 0.35rem 1.1rem;
+    border-radius: 40px;
+    font-size: 0.82rem;
+    display: inline-block;
+    margin-top: 0.4rem;
+}
+
+/* Contact section */
+.top-container hr {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    margin: 1.6rem auto;
+    width: 70%;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.15rem;
+    text-align: left;
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-icon {
+    width: 38px;
+    height: 38px;
+    background: rgba(255, 255, 240, 0.12);
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    color: #ffc107;
+    flex-shrink: 0;
+}
+
+.contact-info h6 {
+    font-size: 0.68rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.1rem;
+    color: #b3d4f0;
+}
+
+.contact-info a {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: white;
+    text-decoration: none;
+    transition: 0.2s;
+    word-break: break-all;
+}
+
+.contact-info a:hover {
+    color: #ffc107;
+}
+
+.main-container {
+    background: white;
+    padding: 2.6rem 2.6rem 2.3rem; 
+    margin: 0;                       
+}
+
+/* Section headers */
+.section-title {
+    font-weight: 700;
+    font-size: 1.2rem;
+    letter-spacing: -0.2px;
+    color: #0a2b3e;
+    border-left: 5px solid #ffc107;
+    padding-left: 0.9rem;
+    margin: 1.9rem 0 1rem 0;
+}
+
+.section-title:first-of-type {
+    margin-top: 0;
+}
+
+/* Project */
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.25rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.project-header h5 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.project-tech {
+    font-size: 0.8rem;
+    color: #666;
+    font-style: italic;
+}
+
+.project-desc {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #444;
+    line-height: 1.4;
+}
+
+/* Skills & Languages */
+
+.skill-item{
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 0.6rem;
+    gap: 0.75rem;
+}
+
+.skill-name,
+.lang-name {
+    font-weight: 600;
+    min-width: 90px;          
+    color: #333;              
+}
+
+.skill-techs {
+    font-weight: 600;
+    color: #555;              
+    font-size: 0.95em;
+}
+.lang-item{
+    
+    display: flex;
+    justify-content: space-between; 
+    align-items: baseline;
+    margin-bottom: 0.55rem;
+}
+.lang-level {
+    font-weight: 600;
+    color: #555;
+    font-size: 0.9em;
+}
+
+/* Education, Achievements, References */
+.edu-item,
+.training-item,
+.achievement-item,
+.project-item,
+.ref-item {
+    margin-bottom: 1.15rem;
+}
+
+.edu-item h5,
+.training-item h5,
+.project-item h5,
+.achievement-item h5,
+.ref-item h5 {
+    font-weight: 700;
+    font-size: 1rem;
+    color: #0a2b3e;
+    margin-bottom: 0.15rem;
+}
+
+.edu-meta,
+.training-meta,
+.project-meta
+ {
+    font-size: 0.8rem;
+    color: #5f7f9c;
+    font-weight: 500;
+}
+
+.text-muted-sm {
+    font-size: 0.9rem;
+    color: #3c5a73;
+    line-height: 1.55;
+}
+
+/* Portfolio link */
+.portfolio-link {
+    background: #f8fafc;
+    border-radius: 50px;
+    padding: 0.55rem 1.15rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    transition: 0.2s;
+    border: 1px solid #e2edf2;
+    text-decoration: none;
+    font-weight: 500;
+    color: #0a2b3e !important;
+}
+
+.portfolio-link i {
+    font-size: 0.95rem;
+    color: #0a2b3e;
+}
+
+.portfolio-link:hover {
+    background: #ffc10720;
+    border-color: #ffc107;
+    transform: translateX(4px);
+}
+
+/* Footer note */
+.main-container hr {
+    margin: 1.8rem 0 1rem;
+    opacity: 0.4;
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 768px) {
     body {
-        background: linear-gradient(145deg, #e9eef3 0%, #dce3ec 100%);
-        font-family: 'Inter', sans-serif;
-        padding: 2rem 1rem;
+        padding: 1.2rem 0.8rem;
     }
-    /* Main card container */
+
     .cv-card {
-        max-width: 1100px;
-        margin: 0 auto;
-        background: #ffffff;
-        border-radius: 2rem;
-        box-shadow: 0 25px 45px -12px rgba(0, 0, 0, 0.25);
-        overflow: hidden;
-        transition: all 0.2s ease;
+        border-radius: 1.2rem;
     }
-    /*profile + contact*/
-    .left-panel {
-        background: #0a2b3e;
-        color: #f0f6fa;
-        padding: 2rem 1.8rem;
-        height: 100%;
-        border-radius: 0;
+
+    .top-container {
+        padding: 2rem 1.5rem 1.6rem;
     }
-    .right-panel {
-        background: white;
-        padding: 2rem 2rem 2rem 1.8rem;
+
+    .main-container {
+        padding: 2rem 1.6rem 1.8rem;
+        margin: 0;
     }
-    /* profile image */
-    .profile-img-wrapper {
-        text-align: center;
-        margin-bottom: 1.8rem;
-    }
-    .profile-img {
-        width: 130px;
-        height: 130px;
-        object-fit: cover;
-        border-radius: 50%;
-        border: 4px solid #ffc107;
-        box-shadow: 0 12px 18px -8px rgba(0,0,0,0.3);
-        transition: transform 0.3s ease;
-    }
-    .profile-img:hover {
-        transform: scale(1.05);
-    }
-    .name-title {
-        text-align: center;
-        margin-top: 0.5rem;
-    }
+
     .name-title h1 {
-        font-size: 1.9rem;
-        font-weight: 700;
-        letter-spacing: -0.5px;
-        color: white;
-        margin-bottom: 0.25rem;
+        font-size: 1.7rem;
     }
-    .name-title .badge-role {
-        background: #ffc107;
-        color: #0a2b3e;
-        font-weight: 600;
-        padding: 0.3rem 1rem;
-        border-radius: 40px;
-        font-size: 0.8rem;
-        display: inline-block;
-        margin-top: 0.5rem;
-    }
-    /* contact items */
+
     .contact-item {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-        margin-bottom: 1.2rem;
-        word-break: break-word;
+        max-width: 100%;
     }
-    .contact-icon {
-        width: 36px;
-        height: 36px;
-        background: rgba(255,255,240,0.12);
-        border-radius: 50%;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.2rem;
-        color: #ffc107;
-    }
-    .contact-info {
-        flex: 1;
-    }
-    .contact-info h6 {
-        font-size: 0.7rem;
-        font-weight: 500;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        margin-bottom: 0;
-        color: #b3d4f0;
-    }
-    .contact-info p, .contact-info a {
-        margin-bottom: 0;
-        font-size: 0.85rem;
-        font-weight: 500;
-        color: white;
-        text-decoration: none;
-        transition: 0.2s;
-    }
-    .contact-info a:hover {
-        color: #ffc107;
-        text-decoration: underline;
-    }
-    /* section headers*/
+
     .section-title {
-        font-weight: 700;
-        font-size: 1.25rem;
-        letter-spacing: -0.2px;
-        color: #0a2b3e;
-        border-left: 5px solid #ffc107;
-        padding-left: 0.9rem;
-        margin: 1.8rem 0 1rem 0;
+        font-size: 1.1rem;
+        margin-top: 1.5rem;
     }
-    .section-title:first-of-type {
-        margin-top: 0;
+}
+
+@media (max-width: 576px) {
+    .skill-item,
+    .lang-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.4rem;
     }
-    
-    /* skill & language rating dots */
-    .skill-item, .lang-item {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-        margin-bottom: 1rem;
-    }
-    .skill-name, .lang-name {
-        font-weight: 600;
-        font-size: 0.9rem;
-        color: #1e2f3a;
-        min-width: 90px;
-    }
+
     .dots-group {
-        display: flex;
-        gap: 8px;
-        align-items: center;
+        margin-top: 0.15rem;
     }
-    .dot-filled {
-        width: 12px;
-        height: 12px;
-        background-color: #0a2b3e;
-        border-radius: 50%;
-        display: inline-block;
+
+    .name-title h1 {
+        font-size: 1.55rem;
     }
-    .dot-empty {
-        width: 12px;
-        height: 12px;
-        background-color: #e2e8f0;
-        border-radius: 50%;
-        display: inline-block;
-        border: 1px solid #cbd5e1;
+}
+
+/* Print support */
+@media print {
+    * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
     }
-    
-    /* achievements, education cards */
-    .edu-item, .achievement-item, .ref-item {
-        margin-bottom: 1.2rem;
-        padding-left: 0.5rem;
+
+    body {
+        background: white !important;
+        padding: 0 !important;
+        margin: 0 !important;
     }
-    .edu-item h5, .achievement-item h5, .ref-item h5 {
-        font-weight: 700;
-        font-size: 1rem;
-        color: #0a2b3e;
-        margin-bottom: 0.1rem;
+
+    .cv-card {
+        box-shadow: none !important;
+        max-width: 100% !important;
+        border-radius: 1.2rem !important;
+        margin: 0 !important;
+        overflow: hidden !important;
     }
-    .edu-meta {
-        font-size: 0.75rem;
-        color: #5f7f9c;
-        font-weight: 500;
-        margin-bottom: 0.3rem;
+
+    .top-container {
+        border-radius: 1.2rem 1.2rem 0 0 !important;
     }
-    .text-muted-sm {
-        font-size: 0.85rem;
-        color: #3c5a73;
+    @page {
+        margin: 12mm;
+        size: A4;
     }
-    
-    .portfolio-link {
-        background: #f8fafc;
-        border-radius: 60px;
-        padding: 0.5rem 1rem;
-        display: inline-flex;
-        align-items: center;
-        gap: 0.6rem;
-        transition: 0.2s;
-        border: 1px solid #e2edf2;
-        text-decoration: none;
-        font-weight: 500;
-    }
-    .portfolio-link i {
-        font-size: 1.2rem;
-        color: #0a2b3e;
-    }
-    .portfolio-link:hover {
-        background: #ffc10720;
-        border-color: #ffc107;
-        transform: translateX(5px);
-    }
-    
-    hr {
-        margin: 0.8rem 0;
-        opacity: 0.5;
-    }
-    
-    @media (max-width: 768px) {
-        body {
-            padding: 1rem 0.75rem;
-        }
-        .left-panel {
-            border-radius: 1.5rem 1.5rem 0 0;
-            padding: 1.5rem;
-        }
-        .right-panel {
-            padding: 1.5rem;
-        }
-        .profile-img {
-            width: 100px;
-            height: 100px;
-        }
-        .name-title h1 {
-            font-size: 1.5rem;
-        }
-        .contact-item {
-            gap: 0.7rem;
-        }
-        .section-title {
-            font-size: 1.1rem;
-            margin-top: 1.2rem;
-        }
-        .dots-group {
-            gap: 5px;
-        }
-    }
-    
-    @media (max-width: 576px) {
-        .skill-item, .lang-item {
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 0.5rem;
-        }
-        .dots-group {
-            margin-top: 0.2rem;
-        }
-    }
-    
-    /* custom spacing */
-    .mt-mini {
-        margin-top: 0.25rem;
-    }
+}
